@@ -39,6 +39,10 @@ function gravityview_customize_search_operator_13644( $search_criteria = array()
 		return $search_criteria;
 	}
 
+	if( !isset( $search_criteria['field_filters'] ) ) {
+		return $search_criteria;
+	}
+
 	foreach ( (array) $search_criteria['field_filters'] as $key => $field_filter ) {
 
 		// Don't process for search mode
